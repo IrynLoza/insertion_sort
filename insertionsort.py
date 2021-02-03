@@ -22,9 +22,14 @@ For example::
 def insertion_sort(alist):
     """Given a list, sort it using insertion sort."""
 
-    
-
-
+    for i in range(1, len(alist)):
+        #assign in every iteration
+        k = i
+        #if current element more then previous element
+        while k > 0 and alist[k-1] > alist[k]:
+            alist[k], alist[k-1] = alist[k-1], alist[k]
+            k-= 1
+    return alist         
 
 
 if __name__ == '__main__':
